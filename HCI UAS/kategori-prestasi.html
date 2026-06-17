@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kategori Prestasi - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col items-center">
+
+    <div class="w-full max-w-[1440px] bg-white shadow-xl min-h-[1200px] flex flex-col justify-between">
+
+        <div>
+            <nav id="navbar-container" class="bg-[#0A2240] text-white sticky top-0 z-50 shadow-md"></nav>
+
+            <section class="w-full mx-auto px-16 pt-16 pb-10 flex flex-col items-center">
+                <div class="flex flex-col items-center text-center space-y-4 max-w-2xl">
+                    <div id="main-icon-container" class="w-20 h-20 bg-blue-900 text-white rounded-full flex items-center justify-center text-3xl shadow-md">
+                        <i id="main-icon" class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h2 id="main-title" class="text-2xl md:text-3xl font-black text-blue-950 uppercase tracking-tight">PRESTASI AKADEMIK</h2>
+                        <p id="main-desc" class="text-xs md:text-sm text-gray-400 font-semibold">Prestasi di bidang akademik dan kompetisi ilmu pengetahuan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full mx-auto px-16 pb-24">
+                <div id="cards-container" class="max-w-4xl mx-auto space-y-4">
+                    </div>
+            </section>
+        </div>
+
+        <footer class="bg-[#0A2240] text-white pt-14 pb-6 border-t-4 border-yellow-400">
+            <div class="w-full mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-xs text-gray-300">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="w-11 h-11 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-blue-900 text-sm">LOGO</div>
+                        <h4 class="font-bold text-sm md:text-base">SMK NEGERI 3 JAKARTA</h4>
+                    </div>
+                    <p class="leading-relaxed text-xs">Sekolah menengah kejuruan yang berkomitmen mencetak generasi berkompeten, berkarakter, dan siap menghadapi dunia kerja.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Link Cepat</h4>
+                    <div class="grid grid-cols-2 gap-2 font-medium text-xs">
+                        <a href="#" class="hover:text-yellow-400 transition">Beranda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">E-Rapor</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Profil</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Agenda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Jurusan</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Galeri</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Berita</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Kurikulum</a>
+                        <a href="#" class="hover:text-yellow-400 transition">PPDB</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Ekstrakurikuler</a>
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Kontak Kami</h4>
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-0.5 mr-2 text-yellow-400"></i> Jl. Garuda No.63, RT.1/RW.6, Gn. Sahari Sel., Kec. Kemayoran, Kota Jakarta Pusat, DKI Jakarta 10610</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt mr-2 text-yellow-400"></i> (021) 4242622</p>
+                    <p class="flex items-center"><i class="fas fa-envelope mr-2 text-yellow-400"></i> smknegeri3jkt@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-clock mr-2 text-yellow-400"></i> Senin - Jumat : 06.30 - 15.30</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Lokasi Sekolah</h4>
+                    <div class="rounded-lg overflow-hidden bg-gray-200 border border-gray-700 h-32">
+                        <img src="peta_lokasi.jpg" alt="Peta Lokasi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full mx-auto px-12 border-t border-gray-800 pt-5 text-center text-[11px] text-gray-500">
+                <p>&copy; 2026 SMK Negeri 3 Jakarta. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // 1. Memuat navbar eksternal
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Gagal memuat komponen navbar:', error));
+
+        // 2. Basis Data Prestasi Berdasarkan 3 File Gambar Yang Diupload
+        const prestasiData = {
+            akademik: {
+                title: "Prestasi Akademik",
+                desc: "Prestasi di bidang akademik dan kompetisi ilmu pengetahuan.",
+                icon: "fa-graduation-cap",
+                bgIcon: "bg-blue-900",
+                textIcon: "text-white",
+                list: [
+                    { label: "Juara 1", title: "Juara 1 Olimpiade Matematika", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 2", title: "Juara 2 LKS Akuntansi", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 1", title: "Juara 1 Lomba Web Design", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 3", title: "Juara 3 Olimpiade Bahasa Inggris", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 1", title: "Juara 1 Kompetisi Sains Nasional", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" }
+                ]
+            },
+            nonAkademik: {
+                title: "Non-Akademik",
+                desc: "Prestasi di bidang olahraga, seni, kreativitas, dan ekstrakurikuler.",
+                icon: "fa-trophy",
+                bgIcon: "bg-yellow-400",
+                textIcon: "text-blue-950",
+                list: [
+                    { label: "Juara 1", title: "Juara 1 Futsal", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 2", title: "Juara 2 Pencak Silat", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 1", title: "Juara 1 Story Telling", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 3", title: "Juara 3 Tari Tradisional", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 1", title: "Juara 1 Fotografi", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" }
+                ]
+            },
+            tingkatKejuaraan: {
+                title: "Tingkat Kejuaraan",
+                desc: "Prestasi di tingkat regional, wilayah kota, provinsi, nasional hingga skala internasional.",
+                icon: "fa-star",
+                bgIcon: "bg-blue-950",
+                textIcon: "text-white",
+                list: [
+                    { label: "Juara 1", title: "Juara 1 LKS Web Technologies", winner: "Nida Sa'datulaini", info: "Tingkat: Nasional", img: "images/lomba1.jpg" },
+                    { label: "Juara 2", title: "Juara 2 O2SN", winner: "Nida Sa'datulaini", info: "Tingkat: Provinsi", img: "images/lomba1.jpg" },
+                    { label: "Silver", title: "Silver Medal Robotics Competition", winner: "Nida Sa'datulaini", info: "Tingkat: Internasional", img: "images/lomba1.jpg" },
+                    { label: "Juara 2", title: "Juara 1 Olimpiade Matematika", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" },
+                    { label: "Juara 2", title: "Juara 1 Olimpiade Matematika", winner: "Nida Sa'datulaini", info: "Tingkat: Kota", img: "images/lomba1.jpg" }
+                ]
+            }
+        };
+
+        // 3. Membaca Parameter URL (?type=akademik / ?type=nonAkademik / ?type=tingkatKejuaraan)
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentType = urlParams.get('type') || 'akademik'; // Default ke akademik jika kosong
+
+        // Validasi pengaman parameter
+        if (!prestasiData[currentType]) currentType = 'akademik';
+
+        const dataActive = prestasiData[currentType];
+
+        // 4. Injeksi Data ke Elemen DOM Komponen Atas
+        document.getElementById('main-title').innerText = dataActive.title;
+        document.getElementById('main-desc').innerText = dataActive.desc;
+        
+        const iconContainer = document.getElementById('main-icon-container');
+        iconContainer.className = `w-20 h-20 ${dataActive.bgIcon} ${dataActive.textIcon} rounded-full flex items-center justify-center text-3xl shadow-md`;
+        
+        document.getElementById('main-icon').className = `fas ${dataActive.icon}`;
+
+        // 5. Render Perulangan List Kartu Sesuai Gambar
+        const cardsContainer = document.getElementById('cards-container');
+        cardsContainer.innerHTML = dataActive.list.map(item => `
+            <a href="detail-prestasi.html" class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center justify-between hover:shadow-md hover:border-blue-100 transition duration-200 group cursor-pointer">
+                <div class="flex items-center space-x-5 min-w-0">
+                    <div class="relative w-28 h-20 rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                        <img src="${item.img}" alt="Thumb" class="w-full h-full object-cover">
+                        <span class="absolute bottom-1 left-1 bg-white/95 text-blue-950 font-black text-[9px] px-1.5 py-0.5 rounded border border-gray-100 shadow-sm flex items-center gap-0.5">
+                            <i class="fas fa-trophy text-yellow-500 text-[8px]"></i>${item.label}
+                        </span>
+                    </div>
+                    <div class="space-y-0.5 min-w-0">
+                        <h4 class="font-extrabold text-sm md:text-base text-gray-800 tracking-tight group-hover:text-blue-900 transition truncate">${item.title}</h4>
+                        <p class="text-xs text-gray-400 font-semibold">Peraih: ${item.winner}</p>
+                        <p class="text-[11px] text-gray-400 font-medium">${item.info}</p>
+                    </div>
+                </div>
+                <div class="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:text-blue-900 group-hover:border-blue-200 transition shrink-0 ml-4">
+                    <i class="fas fa-chevron-right text-xs"></i>
+                </div>
+            </a>
+        `).join('');
+    </script>
+
+</body>
+</html>

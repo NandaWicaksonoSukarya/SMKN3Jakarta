@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Informasi - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col items-center">
+
+    <div class="w-full max-w-[1440px] bg-white shadow-xl">
+
+        <nav id="navbar-container" class="bg-[#0A2240] text-white sticky top-0 z-50 shadow-md"></nav>
+
+        <header class="relative bg-gradient-to-r from-[#0F2C59] to-[#1A4B8F] text-white min-h-[500px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center hidden md:block" style="background-image: url('images/fasilitas3.jpg'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+            
+            <div class="relative w-full mx-auto px-16 py-16 grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <h2 id="hero-title" class="text-5xl md:text-6xl font-black tracking-tight uppercase leading-none">BERITA</h2>
+                    <div class="space-y-2 text-gray-100 text-base md:text-lg border-l-4 border-yellow-400 pl-5 font-medium leading-relaxed max-w-lg">
+                        <p class="text-yellow-400 font-extrabold text-lg md:text-xl">Informasi Terkini dari SMK Negeri 3 Jakarta</p>
+                        <p class="text-xs md:text-sm text-gray-200">Dapatkan update terbaru seputar kegiatan sekolah, prestasi siswa, program unggulan, dan informasi penting lainnya.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="w-full mx-auto px-16 py-16 bg-gray-50/10">
+            <div class="grid md:grid-cols-12 gap-10 max-w-6xl mx-auto items-start">
+                
+                <div class="md:col-span-8 space-y-8">
+                    <div id="filter-buttons" class="flex flex-wrap gap-2 text-xs font-bold border-b border-gray-100 pb-4">
+                        <button onclick="filterBerita('semua', this)" class="filter-btn bg-[#0A2240] text-white px-4 py-2.5 rounded-lg shadow transition">Semua Berita</button>
+                        <button onclick="filterBerita('kegiatan', this)" class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2.5 rounded-lg hover:bg-gray-50 transition">Kegiatan Sekolah</button>
+                        <button onclick="filterBerita('prestasi', this)" class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2.5 rounded-lg hover:bg-gray-50 transition">Prestasi</button>
+                        <button onclick="filterBerita('informasi', this)" class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2.5 rounded-lg hover:bg-gray-50 transition">Informasi</button>
+                        <button onclick="filterBerita('pengumuman', this)" class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2.5 rounded-lg hover:bg-gray-50 transition">Pengumuman</button>
+                    </div>
+
+                    <div id="news-list" class="space-y-4">
+                        </div>
+                </div>
+
+                <div class="md:col-span-4 space-y-6">
+                    <div class="relative flex items-center bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden focus-within:border-blue-300 transition">
+                        <input type="text" id="search-input" onkeyup="cariBerita()" placeholder="Cari berita..." class="w-full px-4 py-3 text-sm font-medium text-gray-700 placeholder-gray-400 outline-none">
+                        <div class="bg-yellow-400 text-blue-950 px-4 py-3.5 shrink-0"><i class="fas fa-search text-sm"></i></div>
+                    </div>
+
+                    <div class="bg-white border border-gray-100 rounded-2xl shadow-md p-6 space-y-5">
+                        <div class="flex items-center space-x-2 border-b border-gray-100 pb-3 mb-2 text-[#0A2240]">
+                            <i class="fas fa-star text-yellow-500 text-lg"></i>
+                            <h3 id="popular-title" class="text-base font-black uppercase tracking-wide">Berita Populer</h3>
+                        </div>
+                        <div class="space-y-4" id="popular-list">
+                            </div>
+                    </div>
+
+                    <div id="info-penting-box" class="bg-yellow-100 rounded-2xl border border-yellow-200 p-5 flex items-start space-x-4 shadow-sm hidden transition-all duration-300">
+                        <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-xl flex items-center justify-center text-lg shrink-0 shadow-inner"><i class="fas fa-info-circle"></i></div>
+                        <div class="space-y-0.5">
+                            <h4 class="font-extrabold text-xs md:text-sm text-gray-800">Informasi Penting</h4>
+                            <p class="text-[11px] text-gray-500 font-medium leading-relaxed">Pastikan untuk selalu memeriksa pengumuman secara berkala agar tidak ketinggalan informasi terbaru dari sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="bg-[#0A2240] text-white pt-14 pb-6 border-t-4 border-yellow-400">
+            <div class="w-full mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-xs text-gray-300">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="w-11 h-11 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-blue-900 text-sm">LOGO</div>
+                        <h4 class="font-bold text-sm md:text-base">SMK NEGERI 3 JAKARTA</h4>
+                    </div>
+                    <p class="leading-relaxed text-xs">Sekolah menengah kejuruan yang berkomitmen mencetak generasi berkompeten, berkarakter, dan siap menghadapi dunia kerja.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Link Cepat</h4>
+                    <div class="grid grid-cols-2 gap-2 font-medium text-xs">
+                        <a href="#" class="hover:text-yellow-400 transition">Beranda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">E-Rapor</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Profil</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Agenda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Jurusan</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Galeri</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Berita</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Kurikulum</a>
+                        <a href="#" class="hover:text-yellow-400 transition">PPDB</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Ekstrakurikuler</a>
+                    </div>
+                </div>
+                <div class="space-y-3 text-xs">
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Kontak Kami</h4>
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-0.5 mr-2 text-yellow-400"></i> Jl. Garuda No.63, RT.1/RW.6, Gn. Sahari Sel., Kec. Kemayoran, Kota Jakarta Pusat, DKI Jakarta 10610</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt mr-2 text-yellow-400"></i> (021) 4242622</p>
+                    <p class="flex items-center"><i class="fas fa-envelope mr-2 text-yellow-400"></i> smknegeri3jkt@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-clock mr-2 text-yellow-400"></i> Senin - Jumat : 06.30 - 15.30</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Lokasi Sekolah</h4>
+                    <div class="rounded-lg overflow-hidden bg-gray-200 border border-gray-700 h-32">
+                        <img src="peta_lokasi.jpg" alt="Peta Lokasi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mx-auto px-12 border-t border-gray-800 pt-5 text-center text-[11px] text-gray-500">
+                <p>&copy; 2026 SMK Negeri 3 Jakarta. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Memuat komponen navbar luar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('navbar-container').innerHTML = data; })
+            .catch(error => console.error('Gagal memuat komponen navbar:', error));
+
+        // 1. DATA GABUNGAN (BERITA + PENGUMUMAN SINKRON)
+        const databaseKonten = [
+            // Berita-Berita Utama
+            { type: "berita", kategori: "prestasi", badge: "bg-blue-900 text-white", label: "Prestasi", tanggal: "20 Juni 2024", judul: "Siswa SMKN 3 Jakarta Juara 3 Lomba Tandu Darurat Tingkat Wira Jumbara Wira PMR Tahun 2024", desc: "Tim PMR berhasil meraih juara 3 dalam lomba Tandu Darurat Tingkat Wira Jumbara Wira PMR Tahun 2024 Tingkat Kota Jakarta Pusat.", icon: "fa-bullhorn", color: "bg-blue-50 text-blue-600", isPenting: false },
+            { type: "berita", kategori: "kegiatan", badge: "bg-green-600 text-white", label: "Kegiatan Sekolah", tanggal: "11-12 Mei 2026", judul: "SMK Negeri 3 Jakarta Mengikuti Kegiatan Otsuka Online Factory Visit Sukabumi", desc: "SMKN 3 Jakarta mengikuti Otsuka Online Factory Visit Sukabumi bersama guru serta siswa-siswi kelas X dan XI untuk menambah wawasan dunia industri.", icon: "fa-university", color: "bg-green-50 text-green-600", isPenting: false },
+            { type: "berita", kategori: "informasi", badge: "bg-yellow-500 text-blue-950", label: "Informasi", tanggal: "30 April 2026", judul: "Peringatan Hardiknas 2026 di SMKN 3 Jakarta Dimeriahkan Lomba dan Parade Ekstrakurikuler", desc: "Peringatan Hardiknas 2026 di SMKN 3 Jakarta berlangsung meriah dengan berbagai lomba dan parade ekstrakurikuler yang diikuti siswa.", icon: "fa-info-circle", color: "bg-yellow-50 text-yellow-600", isPenting: false },
+            
+            // Pengumuman-Pengumuman Masuk Di Sini (Menggunakan Desain Minimalis Ikon Kotak)
+            { type: "pengumuman", kategori: "pengumuman", badge: "", label: "", tanggal: "20 Maret 2026", judul: "Jadwal Ujian Semester Genap Tahun Ajaran 2026/2027", desc: "Diberitahukan kepada seluruh peserta didik kelas X dan XI bahwa Ujian Semester Genap akan dilaksanakan pada tanggal 2-10 Juni 2026", icon: "fa-bullhorn", color: "bg-blue-50 text-blue-600", isPenting: true },
+            { type: "pengumuman", kategori: "pengumuman", badge: "", label: "", tanggal: "20 Juni 2026", judul: "Pembagian Rapor Semester Genap 2026/2027", desc: "Pembagian rapor semester genap akan dilaksanakan pada tanggal 20 Juni di kelas masing-masing.", icon: "fa-file-alt", color: "bg-green-50 text-green-600", isPenting: false },
+            { type: "pengumuman", kategori: "pengumuman", badge: "", label: "", tanggal: "15 Juni 2026", judul: "Pendaftaran PPDB Tahun Ajaran 2027/2028", desc: "Pendaftaran peserta didik baru SMKN 3 Jakarta telah dibuka. Silahkan daftar secara online melalui website resmi PPDB.", icon: "fa-users", color: "bg-yellow-50 text-yellow-600", isPenting: false },
+            { type: "pengumuman", kategori: "pengumuman", badge: "", label: "", tanggal: "20 Mei 2026", judul: "Libur Hari Raya Idul Adha 1447 H", desc: "Diberitahukan kepada seluruh warga sekolah bahwa libur hari raya idul adha 1447 pada 27 - 30 Mei 2026", icon: "fa-calendar-alt", color: "bg-red-50 text-red-500", isPenting: false }
+        ];
+
+        let kategoriAktif = "semua";
+
+        // 2. FUNGSI UTAMA RENDER KARTU DINAMIS (BISA RE-LAYOUT OTOMATIS)
+        function renderKonten(data) {
+            const listContainer = document.getElementById('news-list');
+            if (data.length === 0) {
+                listContainer.innerHTML = `<p class="text-sm font-semibold text-gray-400 text-center py-10">Tidak ditemukan data.</p>`;
+                return;
+            }
+
+            listContainer.innerHTML = data.map(item => {
+                // JIKA CATEGORY / TYPE ADALAH PENGUMUMAN -> Gunakan Layout Ikon Kotak Minimalis
+                if (item.type === "pengumuman") {
+                    return `
+                        <div class="bg-white rounded-2xl border border-gray-100 shadow-md p-5 flex items-center justify-between hover:shadow-lg transition group cursor-pointer">
+                            <div class="flex items-center space-x-5 min-w-0">
+                                <div class="w-14 h-14 ${item.color} rounded-xl flex items-center justify-center text-xl shrink-0 shadow-inner"><i class="fas ${item.icon}"></i></div>
+                                <div class="space-y-0.5 min-w-0">
+                                    <div class="flex items-center space-x-3">
+                                        <h4 class="font-extrabold text-sm md:text-base text-gray-800 tracking-tight truncate">${item.judul}</h4>
+                                        ${item.isPenting ? '<span class="bg-yellow-400 text-blue-950 font-black text-[9px] px-2 py-0.5 rounded uppercase tracking-wider shrink-0 shadow-sm">Penting</span>' : ''}
+                                    </div>
+                                    <p class="text-xs text-gray-400 font-medium line-clamp-1">${item.desc}</p>
+                                    <span class="text-[10px] text-gray-400 font-bold block pt-1"><i class="far fa-calendar-alt mr-1"></i> ${item.tanggal}</span>
+                                </div>
+                            </div>
+                            <div class="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:text-blue-900 group-hover:border-blue-200 transition shrink-0 ml-4"><i class="fas fa-chevron-right text-xs"></i></div>
+                        </div>
+                    `;
+                } 
+                // JIKA BERITA -> Gunakan Layout Gambar Thumbnail
+                else {
+                    return `
+                        <div class="bg-white rounded-2xl border border-gray-100 shadow-md p-5 flex flex-col sm:flex-row gap-5 hover:shadow-lg transition">
+                            <div class="relative w-full sm:w-48 h-36 rounded-xl overflow-hidden bg-gray-100 shrink-0 shadow-inner">
+                                <img src="images/lomba1.jpg" alt="Thumb" class="w-full h-full object-cover">
+                                <span class="absolute top-2 left-2 ${item.badge} text-[9px] font-black px-2 py-0.5 rounded uppercase shadow">${item.label}</span>
+                            </div>
+                            <div class="flex flex-col justify-between py-1 min-w-0">
+                                <div class="space-y-1.5">
+                                    <span class="text-[10px] text-gray-400 font-bold block"><i class="far fa-calendar-alt mr-1"></i> ${item.tanggal}</span>
+                                    <h4 class="font-extrabold text-sm text-gray-800 tracking-tight leading-snug line-clamp-2">${item.judul}</h4>
+                                    <p class="text-xs text-gray-400 font-medium line-clamp-2">${item.desc}</p>
+                                </div>
+                                <a href="detail-berita.html" class="text-xs text-blue-900 font-black hover:underline mt-3 block">Baca Selengkapnya &rarr;</a>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
+        }
+
+        // 3. LOGIKA FILTER TAB (DENGAN COUPLING KOTAK KUNING & JUDUL HERO)
+        function filterBerita(kategori, btnElement) {
+            kategoriAktif = kategori;
+
+            // Kelola class tombol tab aktif
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.className = "filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2.5 rounded-lg hover:bg-gray-50 transition";
+            });
+            btnElement.className = "filter-btn bg-[#0A2240] text-white px-4 py-2.5 rounded-lg shadow transition";
+
+            // TARGET UTAMAMU: Logika memunculkan kotak kuning informasi & mengubah judul kanan-kiri
+            const infoBox = document.getElementById('info-penting-box');
+            const searchInput = document.getElementById('search-input');
+            const popularTitle = document.getElementById('popular-title');
+            const heroTitle = document.getElementById('hero-title');
+
+            if (kategori === "pengumuman") {
+                infoBox.classList.remove('hidden'); // Memunculkan kotak kuning
+                searchInput.placeholder = "Cari pengumuman...";
+                popularTitle.innerText = "Pengumuman Penting";
+                heroTitle.innerText = "PENGUMUMAN";
+            } else {
+                infoBox.classList.add('hidden');    // Menyembunyikan kotak kuning kembali
+                searchInput.placeholder = "Cari berita...";
+                popularTitle.innerText = "Berita Populer";
+                heroTitle.innerText = "BERITA";
+            }
+
+            jalankanFilterDanCari();
+        }
+
+        // 4. ENGINE ENGINE INTERNAL (CARI & POPULER)
+        function cariBerita() { jalankanFilterDanCari(); }
+
+        function jalankanFilterDanCari() {
+            const keyword = document.getElementById('search-input').value.toLowerCase();
+            const hasil = databaseKonten.filter(item => {
+                const cocokKategori = (kategoriAktif === "semua" || item.kategori === kategoriAktif);
+                const cocokKeyword = item.judul.toLowerCase().includes(keyword) || item.desc.toLowerCase().includes(keyword);
+                return cocokKategori && cocokKeyword;
+            });
+            renderKonten(hasil);
+        }
+
+        function renderSidePopuler() {
+            const container = document.getElementById('popular-list');
+            container.innerHTML = databaseKonten.slice(0,4).map((item, index) => `
+                <a href="#" class="flex items-start space-x-3 group ${index > 0 ? 'border-t border-gray-50 pt-3' : ''}">
+                    <span class="w-6 h-6 rounded-full bg-yellow-400 text-blue-950 font-black text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-sm">${index + 1}</span>
+                    <div class="min-w-0 space-y-0.5">
+                        <h4 class="text-xs font-extrabold text-gray-700 leading-snug line-clamp-2 group-hover:text-blue-900 transition">${item.judul}</h4>
+                        <span class="text-[10px] text-gray-400 font-semibold block">${item.tanggal}</span>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Inisialisasi awal layar dibuka
+        renderKonten(databaseKonten);
+        renderSidePopuler();
+    </script>
+<script>
+    function setActiveMenu() {
+        // 1. Ambil path halaman yang sedang dibuka (contoh: staff.html)
+        const path = window.location.pathname.split("/").pop();
+        
+        // 2. Seleksi semua link di navbar
+        const allLinks = document.querySelectorAll('nav a');
+        
+        allLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // 3. Jika href cocok dengan path halaman saat ini
+            if (href === path) {
+                link.classList.add('text-yellow-400', 'border-b-2', 'border-yellow-400', 'pb-1');
+                
+                // 4. Jika link tersebut ada di dalam dropdown (anak menu), 
+                //    tandai juga link parent-nya (yaitu PROFIL)
+                const parentGroup = link.closest('.group');
+                if (parentGroup) {
+                    const parentLink = parentGroup.querySelector('a');
+                    parentLink.classList.add('text-yellow-400', 'border-b-2', 'border-yellow-400', 'pb-1');
+                }
+            }
+        });
+    }
+
+    // Jalankan setelah navbar dimuat
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+            setActiveMenu(); // Panggil fungsi setelah HTML masuk
+        });
+</script>
+</body>
+</html>

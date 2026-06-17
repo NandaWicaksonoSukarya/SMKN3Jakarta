@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Prestasi - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col items-center">
+
+    <div class="w-full max-w-[1440px] bg-white shadow-xl min-h-screen flex flex-col justify-between">
+
+        <div>
+            <nav id="navbar-container" class="bg-[#0A2240] text-white sticky top-0 z-50 shadow-md"></nav>
+
+            <header class="relative bg-gradient-to-r from-[#0F2C59] to-[#1A4B8F] text-white min-h-[480px] flex items-center overflow-hidden">
+                <div class="absolute inset-0 bg-black opacity-30"></div>
+                
+                <div id="prestasi-banner" class="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center hidden md:block" style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+                
+                <div class="relative w-full mx-auto px-16 py-16 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-5">
+                        <span class="text-xs font-black text-yellow-400 uppercase tracking-widest block"><i class="fas fa-trophy mr-1"></i> Detail Prestasi Sekolah</span>
+                        <h2 id="prestasi-title" class="text-3xl md:text-5xl font-black tracking-tight uppercase leading-tight">Memuat Judul...</h2>
+                        <div class="w-20 h-1 bg-yellow-400 my-2"></div>
+                        <p id="prestasi-sub" class="text-gray-200 text-sm md:text-base font-medium max-w-lg leading-relaxed">
+                            Apresiasi capaian luar biasa yang berhasil diukir oleh perwakilan putra-putri terbaik SMKN 3 Jakarta.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="w-full mx-auto px-16 py-12 bg-gray-50/30">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-md flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-inner"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="min-w-0">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Cakupan Wilayah</span>
+                            <h4 id="info-tingkat" class="font-extrabold text-sm md:text-base text-gray-800 truncate">-</h4>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-md flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-inner"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="min-w-0">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Tahun Angkatan</span>
+                            <h4 id="info-tahun" class="font-extrabold text-sm md:text-base text-gray-800 truncate">-</h4>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-md flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-inner"><i class="fas fa-user"></i></div>
+                        <div class="min-w-0">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Nama Peraih</span>
+                            <h4 id="info-pemenang" class="font-extrabold text-sm md:text-base text-gray-800 truncate">-</h4>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-md flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-inner"><i class="fas fa-university"></i></div>
+                        <div class="min-w-0">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Penyelenggara</span>
+                            <h4 id="info-penyelenggara" class="font-extrabold text-sm md:text-base text-gray-800 truncate">-</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full mx-auto px-16 py-6">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-md p-8 max-w-5xl mx-auto grid md:grid-cols-12 gap-6 items-start">
+                    <div class="md:col-span-1 flex justify-center">
+                        <div class="w-14 h-12 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center text-2xl shadow-inner"><i class="far fa-file-alt"></i></div>
+                    </div>
+                    <div class="md:col-span-11 space-y-4">
+                        <h3 class="text-lg font-black text-[#0A2240] uppercase tracking-wide">Ulasan & Deskripsi Prestasi</h3>
+                        <div id="prestasi-desc" class="text-sm md:text-base text-gray-600 font-medium leading-relaxed space-y-4">
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full mx-auto px-16 py-12 mb-20">
+                <div class="max-w-5xl mx-auto space-y-8">
+                    <h3 class="text-xl font-black text-[#0A2240] uppercase tracking-wide border-b border-gray-200 pb-3">Album Dokumentasi</h3>
+                    
+                    <div id="documentation-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="bg-[#0A2240] text-white pt-14 pb-6 border-t-4 border-yellow-400">
+            <div class="w-full mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-xs text-gray-300">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="w-11 h-11 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-blue-900 text-sm">LOGO</div>
+                        <h4 class="font-bold text-sm md:text-base">SMK NEGERI 3 JAKARTA</h4>
+                    </div>
+                    <p class="leading-relaxed text-xs">Sekolah menengah kejuruan yang berkomitmen mencetak generasi berkompeten, berkarakter, dan siap menghadapi dunia kerja.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Link Cepat</h4>
+                    <div class="grid grid-cols-2 gap-2 font-medium text-xs">
+                        <a href="#" class="hover:text-yellow-400 transition">Beranda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">E-Rapor</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Profil</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Agenda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Jurusan</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Galeri</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Berita</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Kurikulum</a>
+                        <a href="#" class="hover:text-yellow-400 transition">PPDB</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Ekstrakurikuler</a>
+                    </div>
+                </div>
+                <div class="space-y-3 text-xs">
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Kontak Kami</h4>
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-0.5 mr-2 text-yellow-400"></i> Jl. Garuda No.63, RT.1/RW.6, Gn. Sahari Sel., Kec. Kemayoran, Kota Jakarta Pusat, DKI Jakarta 10610</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt mr-2 text-yellow-400"></i> (021) 4242622</p>
+                    <p class="flex items-center"><i class="fas fa-envelope mr-2 text-yellow-400"></i> smknegeri3jkt@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-clock mr-2 text-yellow-400"></i> Senin - Jumat : 06.30 - 15.30</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Lokasi Sekolah</h4>
+                    <div class="rounded-lg overflow-hidden bg-gray-200 border border-gray-700 h-32">
+                        <img src="peta_lokasi.jpg" alt="Peta Lokasi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mx-auto px-12 border-t border-gray-800 pt-5 text-center text-[11px] text-gray-500">
+                <p>&copy; 2026 SMK Negeri 3 Jakarta. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // 1. Ambil Navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('navbar-container').innerHTML = data; })
+            .catch(error => console.error('Gagal memuat komponen navbar:', error));
+
+        // 2. Pusat Data Detail Berkas Prestasi Sesuai Kategori
+        const databaseDetailLomba = {
+            // Dicocokkan dari ID piala di halaman kategori & halaman utama berita
+            "1": {
+                judul: "Juara 1 Lomba Pendidikan Remaja Sebaya",
+                tingkat: "Kota Jakarta Pusat",
+                tahun: "2024",
+                pemenang: "Balqis Zhafira Maulida",
+                penyelenggara: "Wira Jumbara PMR",
+                subDesc: "Prestasi membanggakan yang diraih oleh peserta didik SMK Negeri 3 Jakarta.",
+                bannerImg: "images/lomba2.jpg", // Menggunakan aset gambar utama sekolah pembawa piala
+                paragraphs: [
+                    "Prestasi ini diraih oleh Balqis Zhafira Maulida sebagai bentuk keberhasilan dalam menguasai materi serta keterampilan Pendidikan Remaja Sebaya (PRS), yang berfokus pada edukasi kesehatan remaja, pengembangan karakter, kepemimpinan, dan kemampuan komunikasi antar teman sebaya.",
+                    "Kejuaraan ini diperoleh melalui kompetisi yang diselenggarakan dalam rangka Jumbara Wira PMR Tahun 2024 tingkat kota, dengan melibatkan peserta terbaik dari berbagai sekolah. Prestasi tersebut menunjukkan kemampuan yang unggul dalam menyampaikan informasi, memecahkan permasalahan remaja, serta menjadi agen perubahan positif di lingkungan sekolah dan masyarakat."
+                ],
+                album: ["images/lomba1.jpg", "images/lomba2.jpg", "images/lomba3.jpg", "images/lomba1.jpg"]
+            }
+        };
+
+        // 3. Tangkap ID Parameter URL (?id=1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const pialaId = urlParams.get('id') || "1"; // Jika link kosong, default ke ID 1 (PMR Balqis)
+
+        // Ambil data dari database berdasarkan ID
+        const detailActive = databaseDetailLomba[pialaId] || databaseDetailLomba["1"];
+
+        // 4. Injeksi Data ke Elemen HTML Screen
+        document.getElementById('prestasi-title').innerText = detailActive.judul;
+        document.getElementById('prestasi-sub').innerText = detailActive.subDesc;
+        document.getElementById('prestasi-banner').style.backgroundImage = `url('${detailActive.bannerImg}')`;
+        
+        document.getElementById('info-tingkat').innerText = detailActive.tingkat;
+        document.getElementById('info-tahun').innerText = detailActive.tahun;
+        document.getElementById('info-pemenang').innerText = detailActive.pemenang;
+        document.getElementById('info-penyelenggara').innerText = detailActive.penyelenggara;
+
+        // Render Paragraf Deskripsi
+        document.getElementById('prestasi-desc').innerHTML = detailActive.paragraphs.map(p => `<p>${p}</p>`).join('');
+
+        // Render Gambar Album Dokumentasi Bawah
+        document.getElementById('documentation-grid').innerHTML = detailActive.album.map(imgSrc => `
+            <div class="bg-white p-2 rounded-xl border border-gray-100 shadow-md overflow-hidden group">
+                <img src="${imgSrc}" alt="Dokumentasi" class="w-full h-40 object-cover rounded-lg group-hover:scale-105 transition duration-300">
+            </div>
+        `).join('');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff & Guru - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .guru-card{
+        transition: all .5s ease;
+    }
+
+    .guru-hide{
+        opacity:0;
+        transform:scale(.9);
+        pointer-events:none;
+    }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col items-center">
+
+    <div class="w-full max-w-[1440px] bg-white shadow-xl">
+
+        <nav id="navbar-container" class="bg-[#0A2240] text-white sticky top-0 z-50 shadow-md"></nav>
+
+        <header class="relative bg-gradient-to-r from-[#0F2C59] to-[#1A4B8F] text-white min-h-[500px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            
+            <div class="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center hidden md:block" style="background-image: url('images/gurubersama.jpg'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+            
+            <div class="relative w-full mx-auto px-16 py-16 grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-5xl md:text-6xl font-black tracking-tight uppercase leading-none">STAFF & <br><span class="text-white">GURU</span></h2>
+                    <div class="space-y-2 text-gray-100 text-base md:text-lg border-l-4 border-yellow-400 pl-5 font-medium leading-relaxed max-w-lg">
+                        <p class="text-yellow-400 font-bold">Tenaga Pendidik dan Kependidikan SMKN 3 Jakarta</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="w-full mx-auto px-16 py-16 flex flex-col items-center">
+            <div class="text-center mb-8">
+                <h3 class="text-lg font-black text-gray-800 border-b-2 border-blue-900 pb-1 uppercase tracking-wider inline-block">Kepala Sekolah</h3>
+            </div>
+
+            <div class="w-full max-w-3xl bg-white rounded-2xl border border-gray-100 shadow-md p-6 grid md:grid-cols-3 gap-6 items-center">
+                <div class="md:col-span-1">
+                    <img src="images/kepsek.jpg" alt="Kepala Sekolah" class="rounded-xl w-full h-auto object-cover shadow">
+                </div>
+                <div class="md:col-span-2 space-y-3">
+                    <div>
+                        <h4 class="text-xl font-black text-[#0A2240]">Iwantoro, M.Pd.</h4>
+                        <p class="text-sm text-yellow-600 font-bold">Kepala SMKN 3 Jakarta</p>
+                        <p class="text-xs text-gray-400 font-medium">Tim PKG | TIm PKB</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-yellow-400 relative">
+                        <span class="absolute left-2 top-0 text-gray-200 text-4xl font-serif leading-none">“</span>
+                        <p class="text-xs md:text-sm text-gray-600 font-medium italic leading-relaxed pl-4">
+                            Pendidikan adalah kunci untuk membuka pintu masa depan. Kami berkomitmen untuk menciptakan lingkungan belajar yang inspiratif dan mendukung setiap potensi siswa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mx-auto px-16 py-12">
+            <div class="text-center mb-10">
+                <h3 class="text-lg font-black text-gray-800 border-b-2 border-blue-900 pb-1 uppercase tracking-wider inline-block">Wakil Kepala Sekolah</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between group">
+                    <img src="images/bulilik.jpg" alt="Waka Kurikulum" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Dra. Lilik Musyarofah, M.Pd.</h4>
+                        <p class="text-[11px] text-yellow-600 font-bold">Waka Kurikulum</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between group">
+                    <img src="images/bahar.jpg" alt="Waka Sarpras" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Drs. Bahar.</h4>
+                        <p class="text-[11px] text-yellow-600 font-bold">Waka Sarana Prasarana</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between group">
+                    <img src="images/toali.jpg" alt="Waka Humas" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Drs. Toali, M.Pd.</h4>
+                        <p class="text-[11px] text-yellow-600 font-bold">Waka Humas Hubin DUDI</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between group">
+                    <img src="images/dwi.jpg" alt="Waka Kesiswaan" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Dwi Astuti, S.Pd., M.A.</h4>
+                        <p class="text-[11px] text-yellow-600 font-bold">Waka Kesiswaan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mx-auto px-16 py-12">
+            <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center border-b border-gray-200 pb-4 mb-8">
+                <h3 class="text-xl font-black text-[#0A2240] uppercase tracking-wider mb-4 sm:mb-0">Guru Produktif</h3>
+                
+                <div class="flex flex-wrap gap-2 text-xs font-bold">
+                    <button class="filter-btn bg-[#0A2240] text-white px-4 py-2 rounded-lg shadow" data-filter="all">Semua</button>
+                    <button class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-500 ease-out" data-filter="tkj">TKJ</button>
+                    <button class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-500 ease-out" data-filter="akuntansi">Akuntansi</button>
+                    <button class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-500 ease-out" data-filter="perkantoran">Perkantoran</button>
+                    <button class="filter-btn bg-white text-gray-600 border border-gray-200 px-4 py-2 rounded-lg hover:bg-gray-50 transition-all duration-500 ease-out" data-filter="ritel">Bisnis Ritel</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="guru-card perkantoran bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between">
+                    <img src="images/emi.jpg" alt="Guru" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Dra. Emmi Pasaribu, M.Pd.</h4>
+                        <p class="text-[11px] text-blue-900 font-bold">Guru Produktif Manajemen Perkantoran</p>
+                    </div>
+                </div>
+                <div class="guru-card akuntansi bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between">
+                    <img src="images/umi.jpg" alt="Guru" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Umi Umairoh, S.Pd.</h4>
+                        <p class="text-[11px] text-blue-900 font-bold">Guru Produktif Akuntansi</p>
+                    </div>
+                </div>
+                <div class="guru-card ritel bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between">
+                    <img src="images/titi.jpg" alt="Guru" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Titi Mayeni Hasanah, SE., MA.</h4>
+                        <p class="text-[11px] text-blue-900 font-bold">Guru Produktif Bisnis Ritel</p>
+                    </div>
+                </div>
+                <div class="guru-card tkj bg-white p-4 rounded-xl border border-gray-100 shadow-md text-center flex flex-col justify-between">
+                    <img src="images/afrizal.jpg" alt="Guru" class="w-full h-48 object-cover rounded-lg mb-3">
+                    <div class="space-y-1">
+                        <h4 class="text-xs md:text-sm font-black text-gray-800 truncate">Afrizal Lazuardi Ichsan, S.T.</h4>
+                        <p class="text-[11px] text-blue-900 font-bold">Guru Produktif Teknik Komputer & Jaringan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mx-auto px-16 py-12 mb-20 grid md:grid-cols-3 gap-10 max-w-5xl">
+            
+            <div class="md:col-span-2 space-y-6">
+                <h3 class="text-lg font-black text-gray-800 border-b-2 border-blue-900 pb-1 uppercase tracking-wider inline-block">Tenaga Kependidikan</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-xl border border-gray-100 shadow flex items-center space-x-3">
+                        <img src="images/sam.jpg" alt="Staff TU" class="w-16 h-20 object-cover rounded-lg shrink-0">
+                        <div class="min-w-0">
+                            <h4 class="text-xs font-black text-gray-800 truncate">Samyono, S.Pd.</h4>
+                            <p class="text-[10px] text-yellow-600 font-bold">Kasubag Tata Usaha</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-gray-100 shadow flex items-center space-x-3">
+                        <img src="images/okto.jpg" alt="Staff TU" class="w-16 h-20 object-cover rounded-lg shrink-0">
+                        <div class="min-w-0">
+                            <h4 class="text-xs font-black text-gray-800 truncate">Oktorina Dyah K</h4>
+                            <p class="text-[10px] text-yellow-600 font-bold">Bendahara</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-gray-100 shadow flex items-center space-x-3">
+                        <img src="images/arun.jpg" alt="Staff TU" class="w-16 h-20 object-cover rounded-lg shrink-0">
+                        <div class="min-w-0">
+                            <h4 class="text-xs font-black text-gray-800 truncate">Arun Suherman</h4>
+                            <p class="text-[10px] text-yellow-600 font-bold">Inventaris Barang</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-gray-100 shadow flex items-center space-x-3">
+                        <img src="images/giyono.jpg" alt="Staff TU" class="w-16 h-20 object-cover rounded-lg shrink-0">
+                        <div class="min-w-0">
+                            <h4 class="text-xs font-black text-gray-800 truncate">Giyono, SE.</h4>
+                            <p class="text-[10px] text-yellow-600 font-bold">ADM Kepegawaian</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-1 space-y-6">
+                <h3 class="text-lg font-black text-gray-800 border-b-2 border-blue-900 pb-1 uppercase tracking-wider inline-block">Statistik</h3>
+                <div class="space-y-3.5">
+                    <div class="bg-[#0A2240] p-4 rounded-xl text-white flex items-center space-x-4 shadow">
+                        <div class="text-2xl text-yellow-400"><i class="fas fa-user-tie"></i></div>
+                        <div>
+                            <span class="block text-xl font-black tracking-tight">50+</span>
+                            <span class="text-[10px] text-gray-300 font-bold uppercase tracking-wider">Guru Profesional</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#0A2240] p-4 rounded-xl text-white flex items-center space-x-4 shadow">
+                        <div class="text-2xl text-yellow-400"><i class="fas fa-briefcase"></i></div>
+                        <div>
+                            <span class="block text-xl font-black tracking-tight">20+</span>
+                            <span class="text-[10px] text-gray-300 font-bold uppercase tracking-wider">Tenaga Kependidikan</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#0A2240] p-4 rounded-xl text-white flex items-center space-x-4 shadow">
+                        <div class="text-2xl text-yellow-400"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <span class="block text-xl font-black tracking-tight">4</span>
+                            <span class="text-[10px] text-gray-300 font-bold uppercase tracking-wider">Jurusan Unggulan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-[#0A2240] text-white pt-14 pb-6 border-t-4 border-yellow-400">
+            <div class="w-full mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-xs text-gray-300">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="w-11 h-11 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-blue-900 text-sm">LOGO</div>
+                        <h4 class="font-bold text-sm md:text-base">SMK NEGERI 3 JAKARTA</h4>
+                    </div>
+                    <p class="leading-relaxed text-xs">Sekolah menengah kejuruan yang berkomitmen mencetak generasi berkompeten, berkarakter, dan siap menghadapi dunia kerja.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Link Cepat</h4>
+                    <div class="grid grid-cols-2 gap-2 font-medium text-xs">
+                        <a href="#" class="hover:text-yellow-400 transition">Beranda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">E-Rapor</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Profil</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Agenda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Jurusan</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Galeri</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Berita</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Kurikulum</a>
+                        <a href="#" class="hover:text-yellow-400 transition">PPDB</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Ekstrakurikuler</a>
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Kontak Kami</h4>
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-0.5 mr-2 text-yellow-400"></i> Jl. Garuda No.63, RT.1/RW.6, Gn. Sahari Sel., Kec. Kemayoran, Kota Jakarta Pusat, DKI Jakarta 10610</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt mr-2 text-yellow-400"></i> (021) 4242622</p>
+                    <p class="flex items-center"><i class="fas fa-envelope mr-2 text-yellow-400"></i> smknegeri3jkt@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-clock mr-2 text-yellow-400"></i> Senin - Jumat : 06.30 - 15.30</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Lokasi Sekolah</h4>
+                    <div class="rounded-lg overflow-hidden bg-gray-200 border border-gray-700 h-32">
+                        <img src="peta_lokasi.jpg" alt="Peta Lokasi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full mx-auto px-12 border-t border-gray-800 pt-5 text-center text-[11px] text-gray-500">
+                <p>&copy; 2026 SMK Negeri 3 Jakarta. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Gagal memuat komponen navbar:', error));
+    </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.guru-card');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[#0A2240]', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-600');
+            });
+
+            button.classList.remove('bg-white', 'text-gray-600');
+            button.classList.add('bg-[#0A2240]', 'text-white');
+
+            cards.forEach(card => {
+                if (filter === 'all' || card.classList.contains(filter)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+<script>
+    function setActiveMenu() {
+        // 1. Ambil path halaman yang sedang dibuka (contoh: staff.html)
+        const path = window.location.pathname.split("/").pop();
+        
+        // 2. Seleksi semua link di navbar
+        const allLinks = document.querySelectorAll('nav a');
+        
+        allLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // 3. Jika href cocok dengan path halaman saat ini
+            if (href === path) {
+                link.classList.add('text-yellow-400', 'border-b-2', 'border-yellow-400', 'pb-1');
+                
+                // 4. Jika link tersebut ada di dalam dropdown (anak menu), 
+                //    tandai juga link parent-nya (yaitu PROFIL)
+                const parentGroup = link.closest('.group');
+                if (parentGroup) {
+                    const parentLink = parentGroup.querySelector('a');
+                    parentLink.classList.add('text-yellow-400', 'border-b-2', 'border-yellow-400', 'pb-1');
+                }
+            }
+        });
+    }
+
+    // Jalankan setelah navbar dimuat
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+            setActiveMenu(); // Panggil fungsi setelah HTML masuk
+        });
+</script>
+</body>
+</html>
