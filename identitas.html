@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identitas Sekolah - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col items-center">
+
+    <!-- WRAPPER UTAMA (Maksimal 1440px, Center) -->
+    <div class="w-full max-w-[1440px] bg-white shadow-xl">
+
+        <!-- ================= WADAH NAVBAR TERPISAH ================= -->
+        <!-- Bagian ini dikosongkan dan akan memuat isi dari navbar.html secara otomatis -->
+        <nav id="navbar-container" class="bg-[#0A2240] text-white sticky top-0 z-50 shadow-md"></nav>
+
+        <!-- ================= HERO SECTION (PERSIS GAYA BERANDA) ================= -->
+        <header class="relative bg-gradient-to-r from-[#0F2C59] to-[#1A4B8F] text-white min-h-[500px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            
+            <!-- TEMPAT FOTO MANUAL 1 -->
+            <div class="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center hidden md:block" style="background-image: url('images/identitas.jpg'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+            
+            <div class="relative w-full mx-auto px-16 py-16 grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-5xl md:text-6xl font-black tracking-tight uppercase leading-none">IDENTITAS <br><span class="text-yellow-400">SEKOLAH</span></h2>
+                    <div class="space-y-2 text-gray-100 text-base md:text-lg border-l-4 border-yellow-400 pl-5 font-medium leading-relaxed max-w-lg">
+                        <p>Komitmen kami untuk mewujudkan pendidikan berkualitas yang berkarakter, kompeten, dan siap menghadapi dunia kerja.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= DATA IDENTITAS SEKOLAH ================= -->
+        <section class="w-full mx-auto px-16 py-20">
+            <div class="text-center mb-12">
+                <h3 class="text-lg font-black text-gray-800 border-b-2 border-blue-900 pb-1 uppercase tracking-wider inline-block">Identitas Sekolah</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 items-start max-w-6xl mx-auto">
+                <!-- Kolom Kiri: Foto Gedung Utama -->
+                <div class="md:col-span-1 flex justify-center">
+                    <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 max-w-[340px]">
+                        <img src="images/depan.jpg" alt="Gedung SMKN 3" class="rounded-xl w-full h-auto object-cover shadow-inner">
+                    </div>
+                </div>
+
+                <!-- Kolom Tengah & Kanan: Detail Tabel Identitas -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <!-- Sisi Teks Kiri -->
+                        <div class="space-y-5 text-sm">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-school text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Nama Sekolah</p><p class="font-extrabold text-gray-800 text-base mt-0.5">SMK Negeri 3 Jakarta</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-university text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Nama Sekolah Lama</p><p class="font-extrabold text-gray-800 text-base mt-0.5">SMEA 2 Jakarta</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-id-card text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">NPSN</p><p class="font-extrabold text-gray-800 text-base mt-0.5">20100154</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-graduation-cap text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Jenjang</p><p class="font-extrabold text-gray-800 text-base mt-0.5">SMK</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-building text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Status Sekolah</p><p class="font-extrabold text-gray-800 text-base mt-0.5">Negeri</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-award text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Akreditasi</p><p class="font-extrabold text-gray-800 text-base mt-0.5">A</p></div>
+                            </div>
+                        </div>
+                        <!-- Sisi Teks Kanan -->
+                        <div class="space-y-5 text-sm sm:border-l sm:border-gray-100 sm:pl-8">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-users text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Jumlah Rombel</p><p class="font-extrabold text-gray-800 text-base mt-0.5">18</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-user-graduate text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Jumlah Siswa</p><p class="font-extrabold text-gray-800 text-base mt-0.5">587</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-user-tie text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Jumlah Guru</p><p class="font-extrabold text-gray-800 text-base mt-0.5">38</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-user-shield text-blue-900 mt-1 text-base w-5 shrink-0"></i>
+                                <div><p class="text-gray-400 font-semibold text-xs uppercase tracking-wide">Jumlah Tata Usaha</p><p class="font-extrabold text-gray-800 text-base mt-0.5">8</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kontak Mini -->
+                    <div class="bg-white rounded-xl shadow-md border border-gray-100 p-5 grid grid-cols-1 sm:grid-cols-3 gap-5 text-xs md:text-sm font-medium">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-blue-900 text-lg shrink-0"></i>
+                            <p class="text-gray-600 leading-relaxed">Jl. Garuda No.63, Kemayoran, Jakarta Pusat</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-blue-900 text-lg shrink-0"></i>
+                            <p class="text-gray-700 font-bold">(021) 4242622</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-900 text-lg shrink-0"></i>
+                            <p class="text-gray-700 font-bold truncate">smknegeri3jkt@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VISI ================= -->
+        <section class="w-full mx-auto px-16 py-10 flex flex-col items-center">
+            <div class="text-center mb-6">
+                <h3 class="text-lg font-black text-gray-800 uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fas fa-globe text-blue-900 text-base"></i> Visi
+                </h3>
+            </div>
+            <div class="w-full max-w-3xl bg-[#0A2240] text-center text-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                <span class="absolute left-5 top-2 text-yellow-400 text-6xl font-serif opacity-20">“</span>
+                <p class="text-xl md:text-2xl font-black tracking-wide py-3">
+                    Menjadi lembaga pendidikan <span class="text-yellow-400">BERPRESTASI</span>
+                </p>
+                <span class="absolute right-5 bottom-2 text-yellow-400 text-6xl font-serif opacity-20">”</span>
+            </div>
+        </section>
+
+        <!-- ================= MISI ================= -->
+        <section class="w-full mx-auto px-16 py-16">
+            <div class="text-center mb-10">
+                <h3 class="text-lg font-black text-gray-800 uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fas fa-rocket text-blue-900 text-base"></i> Misi
+                </h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-users"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Membentuk Karakter</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Membentuk karakter warga sekolah menjadi insan yang beriman, bertaqwa, dan berakhlak mulia.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-cubes"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Kurikulum & Industri</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Menyelaraskan tuntutan sesuai dengan kebutuhan industri dan dunia kerja.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-user-check"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Profesionalitas Guru</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Meningkatkan profesionalitas guru dan manajemen sekolah.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-laptop-code"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Iklim Belajar & IT</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Mewujudkan iklim belajar yang kondusif dan berbasis teknologi informasi.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-graduation-cap"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Kompetensi Keahlian</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Meningkatkan kompetensi pendidik, tenaga kependidikan dan peserta didik sesuai bidang keahlian.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-lightbulb"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Kewirausahaan</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Meningkatkan keterampilan dan mengembangkan jiwa wirausaha.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Pelayanan Masyarakat</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Meningkatkan pelayanan kepada masyarakat dan instansi terkait.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="w-14 h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fas fa-handshake"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-800 mb-2">Kerja Sama Industri</h4>
+                    <p class="text-xs text-gray-400 font-medium leading-relaxed">Meningkatkan kerja sama dengan industri dan dunia kerja.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TUJUAN / SASARAN ================= -->
+        <section class="w-full mx-auto px-16 pb-20 mb-16">
+            <div class="text-center mb-6">
+                <h3 class="text-lg font-black text-gray-800 uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fas fa-list-check text-blue-900 text-base"></i> Tujuan/Sasaran
+                </h3>
+                <p class="text-xs text-gray-400 mt-1 font-medium">Klik pada setiap misi untuk melihat tujuan, sasaran, dan indikator keberhasilan lainnya</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-3">
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">01</span>
+                    <p>Misi 1 - Terbentuknya karakter warga sekolah menjadi insan yang beriman, bertaqwa, dan berakhlak mulia.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">02</span>
+                    <p>Misi 2 - Meningkatkan keterserapan lulusan dan Terciptanya link & match sekolah dengan industri dan dunia kerja.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">03</span>
+                    <p>Misi 3 - Terwujudnya kinerja tenaga pendidik dan tenaga kependidikan yang berkualitas.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">04</span>
+                    <p>Misi 4 - Terciptanya lingkungan sekolah bersih, hijau, sehat, sejuk, aman dan nyaman dengan berbasis teknologi informasi.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">05</span>
+                    <p>Misi 5 - Terwujudnya kompetensi pendidik, tenaga kependidikan dan peserta didik sesuai bidang keahlian.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">06</span>
+                    <p>Misi 6 - Terbentuknya warga sekolah yang memiliki jiwa wirausaha agar mampu menghadapi persaingan global sasaran.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">07</span>
+                    <p>Misi 7 - Tercapainya pelayanan kepada masyarakat dan instansi terkait.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm flex items-center space-x-4 text-sm hover:bg-gray-50 transition cursor-pointer font-semibold text-gray-700">
+                    <span class="bg-yellow-400 text-blue-900 font-black px-2.5 py-0.5 rounded text-xs">08</span>
+                    <p>Misi 8 - Tercapainya kerja sama dengan industri dan dunia kerja.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="bg-[#0A2240] text-white pt-12 pb-6 border-t-4 border-yellow-400">
+            <div class="w-full mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-xs text-gray-300">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="w-11 h-11 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-blue-900 text-sm">LOGO</div>
+                        <h4 class="font-bold text-sm md:text-base">SMK NEGERI 3 JAKARTA</h4>
+                    </div>
+                    <p class="leading-relaxed text-xs">Sekolah menengah kejuruan yang berkomitmen mencetak generasi berkompeten, berkarakter, dan siap menghadapi dunia kerja.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Link Cepat</h4>
+                    <div class="grid grid-cols-2 gap-2 font-medium text-xs">
+                        <a href="#" class="hover:text-yellow-400 transition">Beranda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">E-Rapor</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Profil</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Agenda</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Jurusan</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Galeri</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Berita</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Kurikulum</a>
+                        <a href="#" class="hover:text-yellow-400 transition">PPDB</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Ekstrakurikuler</a>
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Kontak Kami</h4>
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-0.5 mr-2 text-yellow-400"></i> Jl. Garuda No.63, RT.1/RW.6, Gn. Sahari Sel., Kec. Kemayoran, Kota Jakarta Pusat, DKI Jakarta 10610</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt mr-2 text-yellow-400"></i> (021) 4242622</p>
+                    <p class="flex items-center"><i class="fas fa-envelope mr-2 text-yellow-400"></i> smknegeri3jkt@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-clock mr-2 text-yellow-400"></i> Senin - Jumat : 06.30 - 15.30</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 tracking-wider uppercase">Lokasi Sekolah</h4>
+                    <div class="rounded-lg overflow-hidden bg-gray-200 border border-gray-700 h-32">
+                        <img src="peta_lokasi.jpg" alt="Peta Lokasi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full mx-auto px-12 border-t border-gray-800 pt-5 text-center text-[11px] text-gray-500">
+                <p>&copy; 2026 SMK Negeri 3 Jakarta. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ================= SCRIPT INJECTOR NAVBAR ================= -->
+    <script>
+        // Memanggil file navbar.html secara otomatis untuk dimasukkan ke dalam <nav id="navbar-container">
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Gagal memuat komponen navbar:', error));
+    </script>
+<script>
+    function setActiveMenu() {
+        // 1. Ambil path halaman yang sedang dibuka (contoh: staff.html)
+        const path = window.location.pathname.split("/").pop();
+        
+        // 2. Seleksi semua link di navbar
+        const allLinks = document.querySelectorAll('nav a');
+        
+        allLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // 3. Jika href cocok dengan path halaman saat ini
+            if (href === path) {
+                link.classList.add('text-yellow-400', 'border-b-2', 'border-yellow-400', 'pb-1');
+                
+                // 4. Jika link tersebut ada di dalam dropdown (anak menu), 
+                //    tandai juga link parent-nya (yaitu PROFIL)
+                const parentGroup = link.closest('.group');
+                if (parentGroup) {
+                    const parentLink = parentGroup.querySelector('a');
+                    parentLink.classList.add('text-yellow-400', 'border-b-2', 'border-yellow-400', 'pb-1');
+                }
+            }
+        });
+    }
+
+    // Jalankan setelah navbar dimuat
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+            setActiveMenu(); // Panggil fungsi setelah HTML masuk
+        });
+</script>
+</body>
+</html>

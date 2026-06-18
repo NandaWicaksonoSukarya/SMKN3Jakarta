@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Berita - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col items-center">
+
+    <div class="w-full max-w-[1440px] bg-white shadow-xl min-h-screen">
+        <!-- Navbar -->
+        <nav id="navbar-container" class="bg-[#0A2240] text-white sticky top-0 z-50 shadow-md"></nav>
+
+        <main class="w-full mx-auto px-16 py-12 grid md:grid-cols-12 gap-12 max-w-7xl">
+            
+            <!-- KOLOM KIRI: KONTEN BERITA -->
+            <article class="md:col-span-8 bg-white border border-gray-100 p-8 rounded-2xl shadow-sm">
+                <!-- Kategori & Judul -->
+                <span class="bg-[#0A2240] text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded">Kegiatan Sekolah</span>
+                <h1 class="text-3xl md:text-4xl font-black text-gray-900 mt-4 leading-tight">Otsuka Online Factory Visit Sukabumi</h1>
+                
+                <!-- Meta Data -->
+                <div class="flex items-center space-x-6 text-[11px] text-gray-500 font-bold mt-5 border-b border-gray-100 pb-5">
+                    <span class="flex items-center"><i class="far fa-calendar-alt mr-2"></i> 11-12 Mei 2026</span>
+                    <span class="flex items-center"><i class="far fa-user mr-2"></i> Humas SMK Negeri 3 Jakarta</span>
+                    <span class="flex items-center"><i class="far fa-eye mr-2"></i> 200 kali dibaca</span>
+                </div>
+
+                <!-- Gambar Utama -->
+                <div class="mt-8 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                    <img src="images/Otsuka.jpeg" alt="Otsuka Online Factory Visit Sukabumi" class="w-full h-auto object-cover">
+                </div>
+
+                <!-- Isi Berita -->
+                <div class="mt-8 text-sm md:text-base text-gray-700 leading-relaxed font-medium space-y-5">
+                    <p>Pada tanggal 11-12 Mei 2026, guru serta siswa kelas X dan XI mengikuti kegiatan Otsuka Online Factory Visit Sukabumi. Kegiatan ini bertujuan untuk menambah wawasan peserta mengenai dunia industri, proses produksi, budaya kerja, serta penerapan keselamatan dan kesehatan kerja (K3) di lingkungan perusahaan.</p>
+                    <p>Selama kegiatan berlangsung, peserta mengikuti pemaparan materi mengenai profil perusahaan dan proses kerja di industri. Selain itu, peserta juga berkesempatan mengikuti sesi tanya jawab secara langsung dengan narasumber dari pihak perusahaan sehingga dapat memperoleh informasi yang lebih mendalam mengenai dunia kerja dan peluang karier.</p>
+                    <p>Melalui kegiatan ini, siswa mendapatkan pengalaman serta gambaran nyata mengenai lingkungan kerja profesional. Diharapkan kegiatan ini dapat meningkatkan motivasi belajar, memperluas wawasan industri, dan menjadi bekal bagi siswa dalam mempersiapkan diri menghadapi dunia kerja di masa depan.</p>
+                </div>
+
+                <!-- Share -->
+                <div class="mt-10 pt-6 border-t border-gray-100">
+                    <h4 class="text-[11px] font-black text-gray-400 uppercase tracking-wider mb-3">Bagikan Berita</h4>
+                    <div class="flex space-x-3 text-sm">
+                        <button class="w-9 h-9 rounded-full bg-green-500 text-white hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></button>
+                        <button class="w-9 h-9 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition"><i class="fab fa-facebook-f"></i></button>
+                        <button class="w-9 h-9 rounded-full bg-black text-white hover:bg-gray-800 transition"><i class="fab fa-x-twitter"></i></button>
+                        <button class="w-9 h-9 rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition"><i class="fas fa-link"></i></button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KOLOM KANAN: SIDEBAR -->
+            <aside class="md:col-span-4 space-y-8">
+                <!-- Berita Populer -->
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-black text-blue-900 text-sm uppercase tracking-wider border-b border-gray-100 pb-3 mb-4"><i class="fas fa-star mr-2 text-yellow-500"></i> Berita Populer</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-xl font-black text-gray-200">01</span>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-800 hover:text-blue-900 cursor-pointer transition">Siswa SMKN 3 Jakarta Juara 3 Lomba Tandu Darurat...</h4>
+                                <span class="text-[10px] text-gray-400">20 Juni 2024</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-xl font-black text-gray-200">02</span>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-800 hover:text-blue-900 cursor-pointer transition">Siswa Mengikuti Kegiatan Otsuka Online Factory...</h4>
+                                <span class="text-[10px] text-gray-400">11 Mei 2026</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kategori Berita -->
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-black text-blue-900 text-sm uppercase tracking-wider border-b border-gray-100 pb-3 mb-4"><i class="fas fa-list mr-2 text-blue-900"></i> Kategori Berita</h3>
+                    <ul class="space-y-3 text-xs font-bold text-gray-600">
+                        <li class="hover:text-blue-900 cursor-pointer transition flex items-center"><i class="fas fa-chevron-right text-[8px] mr-2"></i> Kegiatan Sekolah</li>
+                        <li class="hover:text-blue-900 cursor-pointer transition flex items-center"><i class="fas fa-chevron-right text-[8px] mr-2"></i> Prestasi</li>
+                        <li class="hover:text-blue-900 cursor-pointer transition flex items-center"><i class="fas fa-chevron-right text-[8px] mr-2"></i> Pengumuman</li>
+                        <li class="hover:text-blue-900 cursor-pointer transition flex items-center"><i class="fas fa-chevron-right text-[8px] mr-2"></i> Informasi</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer-container" class="bg-[#0A2240] text-white py-6 text-center text-xs border-t-4 border-yellow-400 mt-10"></footer>
+    </div>
+
+    <script>
+        fetch('navbar.html').then(r => r.text()).then(d => { document.getElementById('navbar-container').innerHTML = d; });
+        fetch('footer.html').then(r => r.text()).then(d => { document.getElementById('footer-container').innerHTML = d; }).catch(() => {
+            document.getElementById('footer-container').innerHTML = "<p>&copy; 2026 SMK Negeri 3 Jakarta. All Rights Reserved.</p>";
+        });
+    </script>
+</body>
+</html>

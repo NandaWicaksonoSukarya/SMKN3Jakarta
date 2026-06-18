@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Guru - SMK Negeri 3 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div id="navbar-container"></div>
+
+    <main class="max-w-4xl mx-auto py-12 px-6">
+        <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <img id="guru-foto" src="" alt="Foto Guru" class="w-48 h-48 object-cover rounded-3xl shadow-lg">
+                <div class="space-y-2 text-center md:text-left">
+                    <h1 id="guru-nama" class="text-3xl font-black text-[#0A2240]">Memuat...</h1>
+                    <p id="guru-jabatan" class="text-yellow-600 font-bold text-lg"></p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+                <div class="p-4 bg-gray-50 rounded-xl flex items-center gap-4">
+                    <i class="fas fa-graduation-cap text-blue-900 text-xl"></i>
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase font-bold">Pendidikan</p>
+                        <p id="guru-pendidikan" class="font-bold text-sm">...</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl flex items-center gap-4">
+                    <i class="fas fa-clock text-blue-900 text-xl"></i>
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase font-bold">Pengalaman</p>
+                        <p id="guru-pengalaman" class="font-bold text-sm">...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="font-black text-lg mb-3">Tentang Guru</h3>
+                <p id="guru-deskripsi" class="text-gray-600 leading-relaxed"></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Database Guru (Bisa ditambah terus di sini)
+        const databaseGuru = {
+            "reksza": {
+                nama: "Mochamad Reksza, S.Pd.",
+                jabatan: "Guru Produktif TKJ",
+                pendidikan: "S1 Pendidikan Elektro",
+                pengalaman: "7 Tahun",
+                deskripsi: "Mochamad Reksza, S.Pd. merupakan Guru Produktif Teknik Komputer dan Jaringan yang memiliki pengalaman mengajar selama 7 tahun. Aktif dalam pengembangan kompetensi peserta didik di bidang jaringan komputer, administrasi server, dan sertifikasi industri.",
+                foto: "images/kepsek.jpg" // Ganti dengan foto yang sesuai
+            },
+            "afrizal": {
+                nama: "Afrizal Lazuardi, S.T.",
+                jabatan: "Guru Produktif TKJ",
+                pendidikan: "S1 Teknik Informatika",
+                pengalaman: "5 Tahun",
+                deskripsi: "Ahli dalam infrastruktur jaringan dan keamanan siber dengan fokus pada implementasi teknologi terbaru di industri.",
+                foto: "images/afrizal.jpg"
+            }
+        };
+
+        // Ambil ID dari URL (?id=reksza)
+        const params = new URLSearchParams(window.location.search);
+        const idGuru = params.get('id') || 'reksza';
+        const data = databaseGuru[idGuru];
+
+        // Masukkan data ke HTML
+        if(data) {
+            document.getElementById('guru-nama').innerText = data.nama;
+            document.getElementById('guru-jabatan').innerText = data.jabatan;
+            document.getElementById('guru-pendidikan').innerText = data.pendidikan;
+            document.getElementById('guru-pengalaman').innerText = data.pengalaman;
+            document.getElementById('guru-deskripsi').innerText = data.deskripsi;
+            document.getElementById('guru-foto').src = data.foto;
+        }
+
+        fetch('navbar.html').then(r => r.text()).then(d => document.getElementById('navbar-container').innerHTML = d);
+    </script>
+</body>
+</html>
